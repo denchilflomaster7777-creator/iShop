@@ -13,7 +13,7 @@ body {
 
 /* Hero-секція */
 .hero-section {
-    background:  #002859 url('img/hector-martinez-EG49vTtKdvI-unsplash.jpg') center/cover no-repeat;
+    background:  #f3f8ff url('img/hector-martinez-EG49vTtKdvI-unsplash.jpg') center/cover no-repeat;
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -52,9 +52,9 @@ body {
 
 /* Кнопки категорій */
 .category-btn.active {
-    background-color: #ffc107 !important;
-    border-color: #ffc107 !important;
-    color: #212529 !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #e8f3ff !important;
 }
 
 .category-btn:not(.active):hover {
@@ -76,7 +76,9 @@ footer a.text-white:hover {
 
 #cartItems .card:hover {
     transform: translateX(4px);
-    background-color: #f8f9fa;
+    background-color: #429efa;
+    height: 120px;
+    width: 100%;
 }
 
 #checkoutCard {
@@ -106,4 +108,28 @@ footer a.text-white:hover {
 .product-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+bi-headphones {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+bi-headphones:hover {
+    transform: translateY(-2px) scale(1.03);
+    color: #ffc107 !important;
+}
+bi-laptop {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+bi-laptop:hover {
+    transform: translateY(-2px) scale(1.03);
+    color: #ffc107 !important;
+}
+bi-controller {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+bi-controller:hover {
+    transform: translateY(-2px) scale(1.03);
+    color: #ffc107 !important;
+}
+bi-clock {
+    transition: transform 0.2s ease, color 0.2s ease;
 }

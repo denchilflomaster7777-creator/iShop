@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-
-    </main>
-
-    <!-- Модальне вікно успішного замовлення -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"><html lang="uk">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
@@ -21,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/cart.css">
 </head>
 
 <body class="bg-light">
@@ -28,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/logo_white.png" alt="LogikaShop" height="40">
+               MyElectronicShop
             </a>
 
             <a href="index.html" class="btn btn-outline-light rounded-pill">
@@ -60,7 +57,6 @@
                     </div>
                     <div class="card-body p-0" id="cartItems">
                         <!-- Товари будуть додані через JS -->
-
                     </div>
                     <div class="card-footer d-flex justify-content-between">
                         <strong class="fs-5">Всього:</strong>
@@ -134,22 +130,7 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center border-0 shadow">
-                <div class="modal-body py-5">
-                    <i class="bi bi-check-circle-fill text-success display-1"></i>
-                    <h3 class="mt-4">Дякуємо за замовлення!</h3>
-                    <p class="text-muted">Ми зв'яжемось з вами найближчим часом для підтвердження.</p>
-                    <a href="index.html" class="btn btn-success btn-lg mt-3 rounded-pill">
-                        <i class="bi bi-shop"></i> Повернутись до магазину
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <!-- Футер -->
     <footer class="bg-dark text-white py-4 mt-auto">

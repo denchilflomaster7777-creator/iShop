@@ -175,7 +175,8 @@ function addToCart(productId) {
     } else {
         cart.push({ ...product, quantity: 1 }); // Додаємо новий товар до кошика
     }
-    saveJsonCookie('cart', cart, 3600 * 24 * 7); // Зберігаємо кошик у Cookie на 1 тижден
+    saveJsonCookie('cart', cart, 3600 * 24 * 7); // Зберігаємо кошик у Cookie на 1 тиждень
+    displayCart(); // Оновлюємо відображення кошика
 }
 
 
@@ -216,6 +217,10 @@ function displayCart() {
     `;
     });
     document.querySelector('#totalPrice').textContent = `${total} грн`; // Виводимо загальну суму
+
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const countBadge = document.querySelector('#cartItemsCount');
+    if (countBadge) countBadge.textContent = totalItems;
 
     
 }
