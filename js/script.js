@@ -135,9 +135,61 @@ async function fetchProducts() {
     products = data; // Оновлюємо глобальний масив для роботи addToCart
     if (productsGrid) {
         displayProducts(data);
+        setupCategoryFilters();
     }
+    
 }
+function setupCategoryFilters() {
 
+    const buttons = document.querySelectorAll('.category-btn');
+
+    buttons.forEach(button => {
+
+        button.addEventListener('click', () => {
+
+            buttons.forEach(btn =>
+                btn.classList.remove('active')
+            );
+
+            button.classList.add('active');
+
+            currentCategory = button.dataset.category;
+
+            filterProducts();
+        });
+
+    });
+
+}
+function filterProducts() {
+
+    const searchText =
+        searchInput?.value.toLowerCase() || '';
+
+    let filteredProducts = [...products];
+
+    // Фільтр по категорії
+    if (currentCategory !== 'all') {
+
+        filteredProducts = filteredProducts.filter(
+            product => product.category === currentCategory
+        );
+
+    }
+
+    // Фільтр по пошуку
+    if (searchText) {
+
+        filteredProducts = filteredProducts.filter(
+            product =>
+                product.title.toLowerCase().includes(searchText)
+        );
+
+    }
+
+    displayProducts(filteredProducts);
+
+}
 // ========== Відображення товарів ==========
 function displayProducts(products) {
     productsGrid.innerHTML = ''; // Очищаємо блок товарів
